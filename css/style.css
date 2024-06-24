@@ -1,0 +1,116 @@
+/* 
+reset
+ */
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+   font-family: "PT Sans", sans-serif; 
+}
+
+/* 
+general
+ */
+
+ .container{
+    max-width: 1000px;
+    margin: 0 auto ;
+ }
+
+ a{
+   color: white;
+   text-decoration: none;
+ }
+
+ nav ul{
+   list-style: none;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+
+ nav ul li{
+   padding: 0 10px;
+ }
+
+ button{
+   padding: 10px 15px;
+   border-radius: 30px;
+ }
+
+ .opacity{
+   opacity: 0.9;
+ }
+ /************************************************
+    UTILITIES
+ ************************************************/
+
+/* LAYOUT */
+
+
+ /************************************************
+    SITE SECTIONS
+ ************************************************/
+
+/* HEADER */
+ header{
+    background-color: #0084FD;
+    color: white;
+    padding: 5px 20px;
+ }
+
+ .header-container{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+
+ .header-container a strong{
+   font-size: 2rem;
+ }
+
+ .logo{
+   font-size: 2rem;
+   font-weight: bold;
+ }
+
+ .menu-desktop{
+   display: none;
+ }
+
+
+
+
+ /*  SECTION */
+
+
+ /************************************************
+    RESPONSIVE
+ ************************************************/
+/* MOBILE FIRST  */
+
+ /* TABLET */
+ @media screen and  ( min-width: 576px ){
+   .menu-mobile{
+      display: block;
+   }
+   .menu-desktop{
+      display: none;
+   }
+ }
+  
+
+ /* DESKTOP */
+ @media screen and  ( min-width: 992px ){
+   .menu-mobile{
+      display: none;
+   }
+   .menu-desktop{
+      display: block;
+   }
+ }
