@@ -15,10 +15,15 @@ html{
 /* 
 general
  */
+ :root {
+  /* Custom properties ( oppure variabili) */
+  --color-blue: #0084FD ;
+ }
 
  .container{
     max-width: 1000px;
     margin: 0 auto ;
+    padding: 0 20px;
  }
 
  a{
@@ -40,6 +45,8 @@ general
  .my-button{
    padding: 10px 15px;
    border-radius: 30px;
+   border: none;
+   cursor: pointer;
  }
 
  .opacity{
@@ -49,25 +56,30 @@ general
  .my-row{
    display: flex;
    flex-wrap: wrap;
-
-
+   justify-content: space-between;
 
  } 
 
  .my-col{
   width: 100% ;
-
-
  }
-
-
 
  .card{
    background-color: #B5DDFF;
    border-radius: 15px;
    padding: 10px;
-   margin-bottom: 5px;
+   margin-bottom: 15px;
+   margin-left: 10px;
+   margin-right: 10px;
+   text-align: center;
+   padding-top: 20px;
  }
+
+ img{
+  max-width: 100%;
+ }
+
+
 
 
  /************************************************
@@ -83,7 +95,7 @@ general
 
 /* HEADER */
  header{
-    background-color: #0084FD;
+    background-color: var(--color-blue);
     color: white;
     padding: 5px 0 ;
    }
@@ -112,7 +124,41 @@ general
  main > section{
    padding: 40px 0;
  }
- /*  SECTION */
+ /*  SECTION INTRO  */
+.card h4, .card i {
+  color: var(--color-blue);
+}
+
+.card h4{
+  font-size: 1.3rem;
+}
+.my-button-blue{
+  background-color: var(--color-blue);
+  color: white;
+  padding: 10px 60px;
+}
+.card a button i{
+  color: white;
+  margin-right: 5px;
+}
+
+.card > *, .my-col-2-3 .card div > * {
+  padding-bottom: 20px;
+ }
+
+ .card > i {
+  font-size: 3rem;
+ }
+
+ /* .my-col-2-3 .card:first-child{
+  text-align: let;
+ } */
+
+ .my-col-2-3 .card span img{
+  height: 200px;
+ }
+
+  /*  SECTION   */
 
 
  /************************************************
@@ -134,18 +180,18 @@ general
    }
 
    .my-col-1-3{
-    width: calc( 100% / 3 );
+    width: calc((100% / 3) - 20px )  ;
    }
 
    .my-col-2-3{
-    width: calc(( 100% / 3 ) * 2 ) ;
+    width: calc((100% / 3 * 2 ) - 10px * 2 ) ;
+   }
+   .height-card{
+    height: 400px;
    }
 
    }
 
-   
- 
-  
 
  /* DESKTOP */
  @media screen and  ( min-width: 992px ){
