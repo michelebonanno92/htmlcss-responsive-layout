@@ -37,7 +37,7 @@ general
    padding: 0 10px;
  }
 
- button{
+ .my-button{
    padding: 10px 15px;
    border-radius: 30px;
  }
@@ -45,6 +45,29 @@ general
  .opacity{
    opacity: 0.9;
  }
+
+ .my-row{
+   display: flex;
+   flex-wrap: wrap;
+   background-color: red;
+
+ } 
+
+ .my-col{
+   width: 100% ;
+   background-color: yellow;
+ }
+
+
+
+ .card{
+   background-color: #B5DDFF;
+   border-radius: 15px;
+   padding: 10px;
+   margin-bottom: 5px;
+ }
+
+
  /************************************************
     UTILITIES
  ************************************************/
@@ -83,9 +106,10 @@ general
    display: none;
  }
 
-
-
-
+ /*  MAIN */
+ main > section{
+   padding: 40px 0;
+ }
  /*  SECTION */
 
 
@@ -96,13 +120,16 @@ general
 
  /* TABLET */
  @media screen and  ( min-width: 576px ){
+  
+  }
    .menu-mobile{
       display: block;
    }
    .menu-desktop{
       display: none;
    }
- }
+   
+ 
   
 
  /* DESKTOP */
