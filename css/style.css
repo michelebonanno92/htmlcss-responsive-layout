@@ -23,7 +23,7 @@ general
  .container{
     max-width: 1000px;
     margin: 0 auto ;
-    padding: 0 20px;
+    padding: 0 -20px;
  }
 
  a{
@@ -56,27 +56,34 @@ general
  .my-row{
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
 
  } 
 
  .my-col{
   width: 100% ;
+  margin-left: 10px;
+  margin-right: 10px;
  }
 
  .card{
    background-color: #B5DDFF;
    border-radius: 15px;
-   padding: 10px;
+   padding: 10px 60px;
    margin-bottom: 15px;
-   margin-left: 10px;
-   margin-right: 10px;
    text-align: center;
    padding-top: 20px;
+   line-height: 2rem;
  }
 
  img{
   max-width: 100%;
+ }
+
+ .display-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
  }
 
 
@@ -97,7 +104,8 @@ general
  header{
     background-color: var(--color-blue);
     color: white;
-    padding: 5px 0 ;
+    padding-top: 10px;
+    padding-bottom: 10px;
    }
 
  .header-container{
@@ -105,6 +113,8 @@ general
    justify-content: space-between;
    flex-wrap: wrap;
    align-items: center;
+   margin-right: 10px;
+   margin-left: 10px;
  }
 
  .header-container a strong{
@@ -150,13 +160,15 @@ general
   font-size: 3rem;
  }
 
- /* .my-col-2-3 .card:first-child{
-  text-align: let;
- } */
-
- .my-col-2-3 .card span img{
-  height: 200px;
+ .my-col-2-3 .card:first-child{
+  text-align: left;
  }
+
+.my-col-2-3 .card div img{
+  height: 300px;
+  margin-bottom: -60px;
+ } 
+  
 
   /*  SECTION   */
 
@@ -184,12 +196,28 @@ general
    }
 
    .my-col-2-3{
-    width: calc((100% / 3 * 2 ) - 10px * 2 ) ;
-   }
-   .height-card{
-    height: 400px;
+    width: calc(((100% / 3 ) * 2 ) - 20px ) ;
    }
 
+   .my-col-2-3 .card:first-child{
+    text-align: left;
+   }
+   .card{
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+    
+  .display-flex-tablet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .height-card{
+    height: 97% ;
+   }
+
+ 
    }
 
 
@@ -202,4 +230,20 @@ general
    .menu-desktop{
       display: block;
    }
+
+   .my-row .my-col-2-3 .display-flex-desktop{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container .my-row .my-col-2-3 .card div img{
+    max-width: 300px;
+   } 
+
+   .height-card{
+    height: 87% ;
+   }
+  
+
  }
